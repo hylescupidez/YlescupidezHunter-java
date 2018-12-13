@@ -33,6 +33,7 @@ public class NewGame {
             //Determines what is chosen and states the winner of the round
             while(numberofplays > 0) {
                 System.out.println("Rock(1), Paper(2), Scissors(3)");
+                System.out.println("Rock(1) beats Scissors(3), Paper(2) beats Rock(1), and Scissors(3) beats Paper(2)");
                 userchoice = user.nextInt();
                 computerchoice = compChoice();
                 System.out.println(name + " chooses: " + userchoice);
@@ -54,12 +55,13 @@ public class NewGame {
                 System.out.println("Computer score: " + computerwins);
                 System.out.println("Tie games: " + tiegame);
                 --numberofplays;
+                System.out.println();
             }
             System.out.println("Play again? Yes(1) or No(0)");
             playagain = user.nextInt();
 
         }
-        System.out.println("Bye");
+        System.out.println("Thank you for playing");
     }
     //Here are all the possible outcomes
     public static int playGame(int player, int computer){
